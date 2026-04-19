@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spectrum - Internet, TV y Teléfono</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <span class="logo-spectrum">spectrum</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#internet">Internet</a></li>
+        <li><a href="#tv">TV</a></li>
+        <li><a href="#telefono">Teléfono</a></li>
+        <li><a href="#paquetes">Paquetes</a></li>
+        <li><a href="#soporte">Soporte</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="https://www.spectrum.net/login" target="_blank" class="btn-outline">Mi Cuenta</a>
+        <a href="tel:+17178279785" class="btn-primary">Contáctanos</a>
+      </div>
+      <button class="hamburger" id="hamburger"><i class="fas fa-bars"></i></button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#internet">Internet</a>
+      <a href="#tv">TV</a>
+      <a href="#telefono">Teléfono</a>
+      <a href="#paquetes">Paquetes</a>
+      <a href="#soporte">Soporte</a>
+      <a href="#" class="btn-primary">Ver Planes</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+    <div class="hero-content">
+      <p class="hero-badge">Sin contratos. Sin tarifas ocultas.</p>
+      <h1>Internet ultrarrápido para toda tu familia</h1>
+      <p class="hero-subtitle">Disfruta de velocidades desde 300 Mbps hasta 1 Gbps con la red más confiable del país.</p>
+      <div class="hero-actions">
+        <a href="tel:+17178279785" class="btn-primary btn-large"><i class="fas fa-phone"></i> (717) 827-9785</a>
+        <a href="#internet" class="btn-outline-hero btn-large">Conocer más</a>
+      </div>
+      <div class="hero-badges">
+        <div class="badge-item">
+          <i class="fas fa-check badge-icon"></i>
+          <span>Sin contratos</span>
+        </div>
+        <div class="badge-item">
+          <i class="fas fa-check badge-icon"></i>
+          <span>Instalación gratis</span>
+        </div>
+        <div class="badge-item">
+          <i class="fas fa-check badge-icon"></i>
+          <span>Soporte 24/7</span>
+        </div>
+      </div>
+
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="stat-num">32M+</span>
+          <span class="stat-label">Hogares conectados</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <span class="stat-num">1 Gbps</span>
+          <span class="stat-label">Velocidad máxima</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <span class="stat-num">99.9%</span>
+          <span class="stat-label">Disponibilidad</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-image">
+      <div class="hero-img-wrapper">
+        <img src="imagenes/navegando.jpg" alt="Cliente disfrutando internet Spectrum" class="hero-img" />
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- COBERTURA -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Verifica la cobertura de internet Spectrum en tu área</h2>
+        <p>Ingresa tu dirección y te mostramos los planes disponibles donde vives</p>
+        <div class="cta-form">
+          <input type="text" id="addressInput" placeholder="Ej: 123 Main St, Los Angeles, CA..." class="address-input" />
+          <button class="btn-primary btn-large" id="checkCoverage">
+            <i class="fas fa-search"></i> Verificar cobertura
+          </button>
+        </div>
+        <p class="cta-note"><i class="fas fa-shield-halved"></i> Sin compromisos. Cancela cuando quieras.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAQUETES / PRECIOS -->
+  <section class="pricing" id="paquetes">
+    <div class="pricing-bg-deco"></div>
+    <div class="container">
+      <div class="pricing-header-top">
+        <span class="pricing-eyebrow"><i class="fas fa-tags"></i> Planes y Precios</span>
+        <h2>Elige el plan perfecto<br>para tu hogar</h2>
+        <p>Sin contratos anuales. Sin tarifas ocultas. Cancela cuando quieras.</p>
+      </div>
+
+      <div class="pricing-grid">
+
+        <!-- Plan 1 -->
+        <div class="pricing-card">
+          <div class="pc-icon"><i class="fas fa-wifi"></i></div>
+          <h3>Internet 300</h3>
+          <p class="pc-desc">Ideal para uso cotidiano, redes sociales y trabajo remoto.</p>
+          <div class="pc-price">
+            <span class="pc-currency">$</span>
+            <span class="pc-amount">35</span>
+            <span class="pc-period">/mes</span>
+          </div>
+          <div class="pc-speed-bar">
+            <span>300 Mbps</span>
+            <div class="pc-bar"><div class="pc-bar-fill" style="width:30%"></div></div>
+          </div>
+          <ul class="pc-features">
+            <li><i class="fas fa-check"></i> Internet hasta 300 Mbps</li>
+            <li><i class="fas fa-check"></i> Sin límite de datos</li>
+            <li><i class="fas fa-check"></i> Módem WiFi incluido</li>
+            <li><i class="fas fa-check"></i> Instalación gratis</li>
+            <li class="pc-no"><i class="fas fa-times"></i> TV incluida</li>
+            <li class="pc-no"><i class="fas fa-times"></i> Teléfono incluido</li>
+          </ul>
+          <a href="tel:+17178279785" class="pc-btn-outline">Contratar ahora</a>
+        </div>
+
+        <!-- Plan 2 — Popular -->
+        <div class="pricing-card pc-popular">
+          <div class="pc-popular-label"><i class="fas fa-star"></i> Más Popular</div>
+          <div class="pc-icon"><i class="fas fa-bolt"></i></div>
+          <h3>Internet 500</h3>
+          <p class="pc-desc">Velocidad media perfecta para familias con varios dispositivos conectados.</p>
+          <div class="pc-price">
+            <span class="pc-currency">$</span>
+            <span class="pc-amount">35</span>
+            <span class="pc-period">/mes</span>
+          </div>
+          <div class="pc-speed-bar">
+            <span>500 Mbps</span>
+            <div class="pc-bar"><div class="pc-bar-fill" style="width:50%"></div></div>
+          </div>
+          <ul class="pc-features">
+            <li><i class="fas fa-check"></i> Internet hasta 500 Mbps</li>
+            <li><i class="fas fa-check"></i> Sin límite de datos</li>
+            <li><i class="fas fa-check"></i> Módem WiFi incluido</li>
+            <li><i class="fas fa-check"></i> Instalación gratis</li>
+            <li><i class="fas fa-check"></i> +125 canales HD</li>
+            <li class="pc-no"><i class="fas fa-times"></i> Teléfono incluido</li>
+          </ul>
+          <a href="tel:+17178279785" class="pc-btn-primary">Contratar ahora</a>
+        </div>
+
+        <!-- Plan 3 -->
+        <div class="pricing-card">
+          <div class="pc-icon"><i class="fas fa-rocket"></i></div>
+          <h3>Internet 1G</h3>
+          <p class="pc-desc">Máxima potencia para hogares con muchos dispositivos, streaming 4K y gaming.</p>
+          <div class="pc-price">
+            <span class="pc-currency">$</span>
+            <span class="pc-amount">45</span>
+            <span class="pc-period">/mes</span>
+          </div>
+          <div class="pc-speed-bar">
+            <span>1 Gbps</span>
+            <div class="pc-bar"><div class="pc-bar-fill" style="width:100%"></div></div>
+          </div>
+          <ul class="pc-features">
+            <li><i class="fas fa-check"></i> Internet hasta 1 Gbps</li>
+            <li><i class="fas fa-check"></i> Sin límite de datos</li>
+            <li><i class="fas fa-check"></i> Módem WiFi incluido</li>
+            <li><i class="fas fa-check"></i> Instalación gratis</li>
+            <li><i class="fas fa-check"></i> +200 canales HD</li>
+            <li><i class="fas fa-check"></i> Teléfono ilimitado</li>
+          </ul>
+          <a href="tel:+17178279785" class="pc-btn-outline">Contratar ahora</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- VELOCIDADES -->
+  <section class="speeds">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow"><i class="fas fa-gauge-high"></i> Comparación de velocidad</span>
+        <h2>¿Cuántos dispositivos puedes conectar?</h2>
+        <p>Cada plan está diseñado para un tipo de hogar. Encuentra el tuyo según cuántos dispositivos usas al mismo tiempo.</p>
+      </div>
+
+      <div class="speed-compare">
+
+        <div class="speed-col">
+          <div class="speed-col-header">
+            <span class="speed-badge-label">Internet 300</span>
+            <div class="speed-num-big">300 <span>Mbps</span></div>
+            <div class="speed-bar-wrap">
+              <div class="speed-bar-track"><div class="speed-bar-fill" style="--w:30%; --delay:0.1s"></div></div>
+            </div>
+          </div>
+          <ul class="speed-uses">
+            <li class="ok"><i class="fas fa-check-circle"></i><span><strong>2–4 dispositivos</strong> simultáneos</span></li>
+            <li class="ok"><i class="fas fa-check-circle"></i><span>Streaming HD en 1 pantalla</span></li>
+            <li class="ok"><i class="fas fa-check-circle"></i><span>Videollamadas estables</span></li>
+            <li class="ok"><i class="fas fa-check-circle"></i><span>Redes sociales y navegación</span></li>
+            <li class="no"><i class="fas fa-times-circle"></i><span>Streaming 4K simultáneo</span></li>
+            <li class="no"><i class="fas fa-times-circle"></i><span>Gaming + streaming al mismo tiempo</span></li>
+          </ul>
+          <a href="tel:+17178279785" class="speed-cta-outline">Contratar $35/mes</a>
+        </div>
+
+        <div class="speed-col speed-col-popular">
+          <div class="speed-popular-tag"><i class="fas fa-star"></i> Más Popular</div>
+          <div class="speed-col-header">
+            <span class="speed-badge-label">Internet 500</span>
+            <div class="speed-num-big">500 <span>Mbps</span></div>
+            <div class="speed-bar-wrap">
+              <div class="speed-bar-track"><div class="speed-bar-fill" style="--w:50%; --delay:0.3s"></div></div>
+            </div>
+          </div>
+          <ul class="speed-uses">
+            <li class="ok"><i class="fas fa-check-circle"></i><span><strong>5–8 dispositivos</strong> simultáneos</span></li>
+            <li class="ok"><i class="fas fa-check-circle"></i><span>Streaming 4K en 2 pantallas</span></li>
+            <li class="ok"><i class="fas fa-check-circle"></i><span>Gaming online sin lag</span></li>
+            <li class="ok"><i class="fas fa-check-circle"></i><span>Home office + entretenimiento</span></li>
+            <li class="ok"><i class="fas fa-check-circle"></i><span>Descargas rápidas</span></li>
+            <li class="no"><i class="fas fa-times-circle"></i><span>Gaming + 4K en 4+ pantallas</span></li>
+          </ul>
+          <a href="tel:+17178279785" class="speed-cta-primary">Contratar $35/mes</a>
+        </div>
+
+        <div class="speed-col">
+          <div class="speed-col-header">
+            <span class="speed-badge-label">Internet 1G</span>
+            <div class="speed-num-big">1 <span>Gbps</span></div>
+            <div class="speed-bar-wrap">
+              <div class="speed-bar-track"><div class="speed-bar-fill speed-bar-max" style="--w:100%; --delay:0.5s"></div></div>
+            </div>
+          </div>
+          <ul class="speed-uses">
+            <li class="ok"><i class="fas fa-check-circle"></i><span><strong>10+ dispositivos</strong> simultáneos</span></li>
+            <li class="ok"><i class="fas fa-check-circle"></i><span>Streaming 4K en todas las pantallas</span></li>
+            <li class="ok"><i class="fas fa-check-circle"></i><span>Gaming competitivo sin interrupciones</span></li>
+            <li class="ok"><i class="fas fa-check-circle"></i><span>Smart home completo</span></li>
+            <li class="ok"><i class="fas fa-check-circle"></i><span>Videoconferencias HD simultáneas</span></li>
+            <li class="ok"><i class="fas fa-check-circle"></i><span>Descargas ultra rápidas</span></li>
+          </ul>
+          <a href="tel:+17178279785" class="speed-cta-outline">Contratar $45/mes</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- POR QUÉ SPECTRUM -->
+  <section class="why-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow"><i class="fas fa-shield-halved"></i> ¿Por qué Spectrum?</span>
+        <h2>Una red en la que puedes confiar</h2>
+        <p>Datos reales de la red Spectrum en Estados Unidos.</p>
+      </div>
+      <div class="why-grid">
+
+        <div class="why-card">
+          <div class="why-icon"><i class="fas fa-users"></i></div>
+          <div class="why-num">32M+</div>
+          <div class="why-label">Hogares y negocios conectados en EE.UU.</div>
+          <p class="why-source"><i class="fas fa-link"></i> <a href="https://corporate.charter.com/" target="_blank">corporate.charter.com</a></p>
+        </div>
+
+        <div class="why-card">
+          <div class="why-icon"><i class="fas fa-map"></i></div>
+          <div class="why-num">41</div>
+          <div class="why-label">Estados con cobertura de red Spectrum</div>
+          <p class="why-source"><i class="fas fa-link"></i> <a href="https://www.spectrum.com/content/dam/spectrum/residential/en/pdf/spectrum-coverage-map.pdf" target="_blank">spectrum.com</a></p>
+        </div>
+
+        <div class="why-card">
+          <div class="why-icon"><i class="fas fa-signal"></i></div>
+          <div class="why-num">99.9%</div>
+          <div class="why-label">Disponibilidad de red según reporte anual Charter 2023</div>
+          <p class="why-source"><i class="fas fa-link"></i> <a href="https://corporate.charter.com/investors" target="_blank">Reporte anual Charter</a></p>
+        </div>
+
+        <div class="why-card">
+          <div class="why-icon"><i class="fas fa-file-contract"></i></div>
+          <div class="why-num">$0</div>
+          <div class="why-label">En contratos anuales — libertad total sin penalizaciones</div>
+          <p class="why-source"><i class="fas fa-link"></i> <a href="https://www.spectrum.com/internet" target="_blank">spectrum.com/internet</a></p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SOPORTE -->
+  <section class="support" id="soporte">
+    <div class="container">
+      <div class="section-header light">
+        <span class="section-eyebrow" style="background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.75);border-color:rgba(255,255,255,0.12)"><i class="fas fa-headset"></i> Soporte</span>
+        <h2>Siempre aquí para ayudarte</h2>
+        <p>Soporte técnico disponible las 24 horas, los 7 días de la semana</p>
+      </div>
+      <div class="support-grid">
+        <div class="support-card">
+          <div class="support-icon"><i class="fas fa-phone-volume"></i></div>
+          <h3>Llámanos</h3>
+          <p>Habla con un experto de soporte en minutos</p>
+          <a href="tel:+17178279785" class="support-link">(717) 827-9785</a>
+        </div>
+        <div class="support-card">
+          <div class="support-icon"><i class="fas fa-comments"></i></div>
+          <h3>Chat en vivo</h3>
+          <p>Resuelve tus dudas al instante con nuestro chat</p>
+          <a href="#" class="support-link">Iniciar chat</a>
+        </div>
+        <div class="support-card">
+          <div class="support-icon"><i class="fas fa-store"></i></div>
+          <h3>Visítanos</h3>
+          <p>Encuentra la tienda Spectrum más cercana</p>
+          <a href="https://www.google.com/maps/search/Spectrum+store+near+me" target="_blank" class="support-link">Buscar tienda</a>
+        </div>
+        <div class="support-card">
+          <div class="support-icon"><i class="fas fa-mobile-screen-button"></i></div>
+          <h3>App My Spectrum</h3>
+          <p>Gestiona tu cuenta desde tu celular</p>
+          <a href="#" class="support-link" onclick="openAppStore(event)">Descargar app</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMULARIO COBERTURA -->
+  <section class="coverage-section" id="cobertura">
+    <div class="container">
+      <div class="coverage-wrapper">
+
+        <div class="coverage-info">
+          <p class="coverage-tag"><i class="fas fa-signal"></i> Verificación de cobertura</p>
+          <h2>¿Tenemos servicio en tu área?</h2>
+          <p>Déjanos tus datos y te confirmamos en menos de 24 horas si Spectrum tiene cobertura disponible en tu dirección.</p>
+          <div class="coverage-benefits">
+            <div class="coverage-benefit">
+              <i class="fas fa-clock"></i>
+              <span>Respuesta en menos de 24 horas</span>
+            </div>
+            <div class="coverage-benefit">
+              <i class="fas fa-phone-volume"></i>
+              <span>Te contactamos por teléfono o email</span>
+            </div>
+            <div class="coverage-benefit">
+              <i class="fas fa-shield-halved"></i>
+              <span>Sin contratos ni compromisos</span>
+            </div>
+            <div class="coverage-benefit">
+              <i class="fas fa-bolt"></i>
+              <span>Activación rápida si hay disponibilidad</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="coverage-card">
+          <form id="coverageForm">
+            <div class="form-group">
+              <label for="cfName">Nombre completo</label>
+              <input type="text" id="cfName" placeholder="Tu nombre completo..." required />
+            </div>
+            <div class="form-group">
+              <label for="cfAddress">Dirección donde deseas el servicio</label>
+              <input type="text" id="cfAddress" placeholder="Calle, número, ciudad, estado..." required />
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="cfPhone">Teléfono</label>
+                <input type="tel" id="cfPhone" placeholder="(555) 000-0000" />
+              </div>
+              <div class="form-group">
+                <label for="cfEmail">Email</label>
+                <input type="email" id="cfEmail" placeholder="tu@email.com" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="cfMessage">Comentarios <span class="form-optional">(opcional)</span></label>
+              <textarea id="cfMessage" placeholder="Horario de preferencia para ser contactado, preguntas, etc." rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn-primary btn-full form-submit-btn">
+              <i class="fas fa-paper-plane"></i> Enviar solicitud
+            </button>
+          </form>
+          <div class="form-success" id="formSuccess">
+            <div class="success-icon"><i class="fas fa-circle-check"></i></div>
+            <h3>¡Solicitud recibida!</h3>
+            <p>Revisaremos la cobertura en tu área y nos comunicamos contigo en menos de 24 horas.</p>
+            <button class="btn-outline" onclick="resetForm()">Enviar otra solicitud</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="logo-spectrum footer-logo">spectrum</span>
+          <p>Conectando hogares y familias con la mejor tecnología de telecomunicaciones.</p>
+          <div class="social-links">
+            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-x-twitter"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Servicios</h4>
+          <ul>
+            <li><a href="#"><i class="fas fa-globe fa-fw"></i> Internet</a></li>
+            <li><a href="#"><i class="fas fa-tv fa-fw"></i> TV por Cable</a></li>
+            <li><a href="#"><i class="fas fa-phone-alt fa-fw"></i> Teléfono</a></li>
+            <li><a href="#"><i class="fas fa-box fa-fw"></i> Paquetes</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Empresa</h4>
+          <ul>
+            <li><a href="#"><i class="fas fa-building fa-fw"></i> Sobre Spectrum</a></li>
+            <li><a href="#"><i class="fas fa-briefcase fa-fw"></i> Carreras</a></li>
+            <li><a href="#"><i class="fas fa-newspaper fa-fw"></i> Noticias</a></li>
+            <li><a href="#"><i class="fas fa-leaf fa-fw"></i> Responsabilidad</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Soporte</h4>
+          <ul>
+            <li><a href="#"><i class="fas fa-circle-question fa-fw"></i> Centro de ayuda</a></li>
+            <li><a href="#"><i class="fas fa-signal fa-fw"></i> Estado del servicio</a></li>
+            <li><a href="#"><i class="fas fa-envelope fa-fw"></i> Contacto</a></li>
+            <li><a href="#"><i class="fas fa-location-dot fa-fw"></i> Tiendas</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Spectrum. Todos los derechos reservados.</p>
+        <div class="footer-legal">
+          <a href="#">Privacidad</a>
+          <a href="#">Términos</a>
+          <a href="#">Accesibilidad</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Schema markup para Google Ads / rastreo de llamadas -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Spectrum Internet",
+    "telephone": "+1-717-827-9785",
+    "url": "https://www.spectrum.com",
+    "description": "Proveedor de internet, TV y teléfono. Planes desde $35/mes sin contratos.",
+    "areaServed": "US",
+    "priceRange": "$$"
+  }
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>
