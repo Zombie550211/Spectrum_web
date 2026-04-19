@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Política de Cookies — Life Line Call</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <div class="logo-lifeline">Life Line Call</div>
+        <div class="logo-tagline">Agente Spectrum</div>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html#internet">Internet</a></li>
+        <li><a href="index.html#paquetes">Planes</a></li>
+        <li><a href="index.html#soporte">Soporte</a></li>
+        <li><a href="index.html#cobertura">Cobertura</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="https://www.spectrum.net/login" target="_blank" class="btn-outline">Mi Cuenta</a>
+        <a href="tel:+17178279785" class="btn-primary">Contáctanos</a>
+      </div>
+      <button class="hamburger" id="hamburger"><i class="fas fa-bars"></i></button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html#internet">Internet</a>
+      <a href="index.html#paquetes">Planes</a>
+      <a href="index.html#soporte">Soporte</a>
+      <a href="index.html#cobertura">Cobertura</a>
+    </div>
+  </nav>
+
+  <section class="legal-hero">
+    <div class="container">
+      <span class="legal-eyebrow"><i class="fas fa-cookie-bite"></i> Legal</span>
+      <h1>Política de Cookies</h1>
+      <p>Qué cookies usamos y cómo puedes controlarlas</p>
+    </div>
+  </section>
+
+  <section class="legal-body">
+    <div class="container">
+      <div class="legal-card">
+
+        <span class="legal-updated"><i class="fas fa-calendar"></i> Última actualización: 19 de abril de 2026</span>
+
+        <h2>1. ¿Qué son las cookies?</h2>
+        <p>Las cookies son pequeños archivos de texto que un sitio web almacena en tu dispositivo cuando lo visitas. Se utilizan para recordar preferencias, mantener sesiones activas y analizar el uso del sitio. No contienen información personal identificable por sí solas.</p>
+
+        <div class="legal-divider"></div>
+
+        <h2>2. Cookies que utilizamos</h2>
+        <p>Este sitio utiliza únicamente <strong>cookies técnicas esenciales</strong>, necesarias para el funcionamiento básico:</p>
+        <ul>
+          <li><strong>Sesión de navegación:</strong> mantienen el estado de la página durante tu visita y se eliminan al cerrar el navegador</li>
+          <li><strong>Preferencias de formulario:</strong> recuerdan temporalmente datos introducidos en el formulario para evitar pérdidas accidentales</li>
+        </ul>
+        <p>Actualmente <strong>no utilizamos</strong> cookies de seguimiento, publicidad, análisis de comportamiento ni cookies de terceros.</p>
+
+        <div class="legal-divider"></div>
+
+        <h2>3. Cookies de terceros</h2>
+        <p>El sitio carga recursos externos como fuentes de Google Fonts y Font Awesome desde CDN. Estos servicios pueden establecer sus propias cookies de rendimiento. Para más información consulta sus respectivas políticas:</p>
+        <ul>
+          <li><a href="https://policies.google.com/privacy" target="_blank" style="color:var(--blue)">Política de privacidad de Google</a></li>
+          <li><a href="https://fontawesome.com/privacy" target="_blank" style="color:var(--blue)">Política de Font Awesome</a></li>
+        </ul>
+
+        <div class="legal-divider"></div>
+
+        <h2>4. Cómo desactivar las cookies</h2>
+        <p>Puedes configurar tu navegador para rechazar o eliminar cookies en cualquier momento. Ten en cuenta que deshabilitar las cookies técnicas puede afectar el funcionamiento del sitio.</p>
+        <ul>
+          <li><strong>Chrome:</strong> Configuración → Privacidad y seguridad → Cookies</li>
+          <li><strong>Firefox:</strong> Ajustes → Privacidad y seguridad → Cookies y datos del sitio</li>
+          <li><strong>Safari:</strong> Preferencias → Privacidad → Gestionar datos de sitios web</li>
+          <li><strong>Edge:</strong> Configuración → Privacidad, búsqueda y servicios → Cookies</li>
+        </ul>
+
+        <div class="legal-divider"></div>
+
+        <h2>5. Cambios en esta política</h2>
+        <p>Podemos actualizar esta política si incorporamos nuevas funcionalidades al sitio. La versión vigente siempre estará disponible aquí con la fecha de actualización.</p>
+
+        <div class="legal-divider"></div>
+
+        <h2>6. Contacto</h2>
+        <p>Si tienes preguntas sobre el uso de cookies en este sitio contáctanos en:</p>
+        <ul>
+          <li><i class="fas fa-phone"></i> (717) 827-9785</li>
+          <li><i class="fas fa-envelope"></i> danielernestoperezmartinez394@gmail.com</li>
+        </ul>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-disclaimer">
+        <i class="fas fa-circle-info"></i>
+        Life Line Call es una empresa independiente y no es Spectrum ni Charter Communications. Los servicios de internet son provistos por Spectrum / Charter Communications, Inc.
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Life Line Call. Todos los derechos reservados.</p>
+        <div class="footer-legal">
+          <a href="privacidad.html">Privacidad</a>
+          <a href="terminos.html">Términos</a>
+          <a href="cookies.html">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+    mobileMenu.querySelectorAll('a').forEach(l => l.addEventListener('click', () => mobileMenu.classList.remove('open')));
+    const navbar = document.querySelector('.navbar');
+    window.addEventListener('scroll', () => {
+      navbar.style.boxShadow = window.scrollY > 10 ? '0 2px 20px rgba(0,0,0,0.08)' : 'none';
+    });
+  </script>
+</body>
+</html>
