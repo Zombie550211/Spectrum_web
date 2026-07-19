@@ -1,16 +1,3 @@
-// Google Ads: conversión al hacer clic en cualquier número de teléfono
-document.querySelectorAll('a[href^="tel:"]').forEach((link) => {
-  link.addEventListener('click', () => {
-    if (typeof gtag === 'function') {
-      gtag('event', 'conversion', {
-        'send_to': 'AW-18125901888/6tDmCOrL-dIcEMCgjcND',
-        'value': 1.0,
-        'currency': 'USD'
-      });
-    }
-  });
-});
-
 // Mobile menu toggle
 const hamburger = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobileMenu');
