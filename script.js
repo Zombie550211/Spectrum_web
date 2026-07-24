@@ -21,97 +21,50 @@ if (navbar) {
   });
 }
 
-// Formulario de cobertura
-const coverageForm = document.getElementById('coverageForm');
-const formSuccess  = document.getElementById('formSuccess');
+// Plans carousel — auto-advance every 3s, with dot navigation
+const plansTrack = document.getElementById('plansTrack');
+const plansDots  = document.getElementById('plansDots');
 
-if (coverageForm) {
-  coverageForm.addEventListener('submit', (e) => {
-    e.preventDefault();
+if (plansTrack && plansDots) {
+  const slides = Array.from(plansTrack.children);
+  let current = 0;
+  let autoplayTimer;
 
-    const name    = document.getElementById('cfName').value.trim();
-    const address = document.getElementById('cfAddress').value.trim();
-    const phone   = document.getElementById('cfPhone').value.trim();
-    const email   = document.getElementById('cfEmail').value.trim();
-    const message = document.getElementById('cfMessage').value.trim();
-
-    if (!name || !address) return;
-    if (!phone && !email) {
-      alert('Por favor ingresa al menos un teléfono o email de contacto.');
-      return;
-    }
-
-    const btn = coverageForm.querySelector('.form-submit-btn');
-    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
-    btn.disabled = true;
-
-    fetch('/send', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ name, address, phone, email, message }),
-    })
-      .then(res => res.json())
-      .then(data => {
-        if (data.ok) {
-          coverageForm.classList.add('hidden');
-          formSuccess.classList.add('visible');
-        } else {
-          alert('Error: ' + (data.error || 'No se pudo enviar. Intenta de nuevo.'));
-          btn.innerHTML = '<i class="fas fa-paper-plane"></i> Enviar solicitud';
-          btn.disabled = false;
-        }
-      })
-      .catch(() => {
-        alert('No se pudo conectar al servidor. Intenta de nuevo.');
-        btn.innerHTML = '<i class="fas fa-paper-plane"></i> Enviar solicitud';
-        btn.disabled = false;
-      });
-  });
-}
-
-function resetForm() {
-  if (!coverageForm) return;
-  coverageForm.reset();
-  coverageForm.classList.remove('hidden');
-  formSuccess.classList.remove('visible');
-  const btn = coverageForm.querySelector('.form-submit-btn');
-  btn.innerHTML = '<i class="fas fa-paper-plane"></i> Enviar solicitud';
-  btn.disabled = false;
-}
-
-// Plans section tab switching
-const tabBtns = document.querySelectorAll('.tab-btn');
-if (tabBtns.length) {
-  tabBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      tabBtns.forEach(b => b.classList.remove('active'));
-      document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
-      btn.classList.add('active');
-      const target = document.getElementById('tab-' + btn.dataset.tab);
-      if (target) target.classList.add('active');
+  slides.forEach((_, i) => {
+    const dot = document.createElement('button');
+    dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+    dot.setAttribute('aria-label', `Ir al plan ${i + 1}`);
+    dot.addEventListener('click', () => {
+      goToSlide(i);
+      restartAutoplay();
     });
+    plansDots.appendChild(dot);
   });
-}
+  const dots = Array.from(plansDots.children);
+  slides[0].classList.add('active');
 
-// Animate provider cards on scroll
-const pcards = document.querySelectorAll('.pcard:not(.pcard-photo)');
-if (pcards.length) {
-  const cardObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry, i) => {
-      if (entry.isIntersecting) {
-        setTimeout(() => {
-          entry.target.style.opacity = '1';
-          entry.target.style.transform = 'translateY(0)';
-        }, i * 50);
-        cardObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1 });
+  function goToSlide(index) {
+    current = index;
+    slides.forEach((slide, i) => slide.classList.toggle('active', i === current));
+    dots.forEach((dot, i) => dot.classList.toggle('active', i === current));
+  }
 
-  pcards.forEach(card => {
-    card.style.opacity = '0';
-    card.style.transform = 'translateY(18px)';
-    card.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
-    cardObserver.observe(card);
-  });
+  function nextSlide() {
+    goToSlide((current + 1) % slides.length);
+  }
+
+  function startAutoplay() {
+    autoplayTimer = setInterval(nextSlide, 3000);
+  }
+
+  function restartAutoplay() {
+    clearInterval(autoplayTimer);
+    startAutoplay();
+  }
+
+  const carousel = plansTrack.closest('.plans-carousel');
+  carousel.addEventListener('mouseenter', () => clearInterval(autoplayTimer));
+  carousel.addEventListener('mouseleave', startAutoplay);
+
+  startAutoplay();
 }
