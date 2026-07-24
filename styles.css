@@ -228,7 +228,7 @@ a { text-decoration: none; color: inherit; }
   height: 600px;
   background-image: url('imagenes/navegando.png');
   background-size: cover;
-  background-position: center center;
+  background-position: 75% center;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -292,6 +292,43 @@ a { text-decoration: none; color: inherit; }
   box-shadow: 0 8px 28px rgba(0,80,255,0.5);
 }
 
+/* ===== SPEED BANNER ===== */
+.speed-banner {
+  position: relative;
+  height: 340px;
+  background-image: url('imagenes/hombrenavegando.png');
+  background-size: cover;
+  background-position: 75% center;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.speed-banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(5, 13, 31, 0.88) 0%,
+    rgba(5, 13, 31, 0.65) 50%,
+    rgba(5, 13, 31, 0.25) 100%
+  );
+}
+
+.speed-banner-content {
+  position: relative;
+  z-index: 1;
+  padding: 0 80px;
+  max-width: 620px;
+}
+
+.speed-banner-content h2 {
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-weight: 800;
+  color: white;
+  line-height: 1.25;
+  letter-spacing: -0.5px;
+}
 
 /* ===== CÓMO FUNCIONA ===== */
 .how-section {
@@ -1041,6 +1078,9 @@ a { text-decoration: none; color: inherit; }
   .hero-content { padding: 0 24px; }
   .hero-content h1 { font-size: 1.6rem; }
   .hero-sub { display: none; }
+
+  .speed-banner { height: 280px; }
+  .speed-banner-content { padding: 0 24px; }
 
   .plan-slide-price { font-size: 2.4rem; }
   .wifi-promo-banner { flex-direction: column; align-items: flex-start; text-align: left; }
